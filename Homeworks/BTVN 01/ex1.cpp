@@ -10,11 +10,11 @@ class HinhTron {
     public:
         double banKinh;
         // Cac phuong thuc (method):
-        double chuVi(double banKinh);
-        double dienTich(double banKinh);
+        double chuVi();
+        double dienTich();
 };
 
-double HinhTron::chuVi(double banKinh){
+double HinhTron::chuVi(){
     double chuVi = 0;
     chuVi = 2 * M_PI * banKinh;
     return chuVi;
@@ -23,7 +23,7 @@ double HinhTron::chuVi(double banKinh){
 //    return 2 * M_PI * banKinh;
 }
 
-double HinhTron::dienTich(double banKinh){
+double HinhTron::dienTich(){
     double dienTich = 1;
     dienTich = M_PI * banKinh * banKinh;
     return dienTich;
@@ -36,8 +36,8 @@ main() {
     HinhTron hinhTron;
     double banKinh;
     cout << "Nhap thong tin hinh tron: " << endl;
-    cout << "\tBan kinh: ";     cin >> banKinh;
+    cout << "\tBan kinh: ";     cin >> hinhTron.banKinh;
     cout << "----------------------------------" << endl;
-    cout << "Chu vi hinh tron: " << hinhTron.chuVi(banKinh) << endl;
-    cout << "Dien tich hinh tron: " << hinhTron.dienTich(banKinh) << endl;
+    cout << "Chu vi hinh tron: " << hinhTron.chuVi() << endl;
+    cout << "Dien tich hinh tron: " << hinhTron.dienTich() << endl;
 }
