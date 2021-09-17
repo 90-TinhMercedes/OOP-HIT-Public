@@ -15,7 +15,6 @@ class Persion {
   public:
     void input();
     void output();
-    friend class Company;
 };
 
 class Employee : public Persion {
@@ -26,7 +25,6 @@ class Employee : public Persion {
   public:
     void input();
     void output();
-    friend class Company;
     friend void fixSalary(Company company);
     friend void sortListEmployee(Company company);
 };
